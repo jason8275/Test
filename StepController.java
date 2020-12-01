@@ -27,8 +27,6 @@ public class StepController {
 		FileOutputStream outputStream = null;
 		OutputStreamWriter outputStreamWriter = null;
 		try {
-			// String filePath = Tools.getValue("acceptFilePath");
-			// filePath = filePath + jobId + "_accept.xml";
 			String filePath = null;
 			filePath = "C:\\temp\\ジョブID_time.xml";
 			File file = new File(filePath);
@@ -65,57 +63,6 @@ public class StepController {
 		return result;
 }
 
-	@RequestMapping(value = "/GetInitProgress}", method = RequestMethod.GET)
-	public String getInitProgress(@RequestParam("jobId") String jobId) {
-
-		String filePath = Tools.getValue("stepFilePath");
-		filePath = filePath + jobId + "_step.xml";
-		// filePath = "C:\\temp\\ジョブID_accept.xml";
-		File file = new File(filePath);
-		if (file.exists()) {
-			HZZBatchStep hzzBatchStep = new HZZBatchStep();
-			try {
-				hzzBatchStep.initStep(jobId);
-			} catch (Exception e1) {
-				// TODO 自動生成された catch ブロック
-				e1.printStackTrace();
-			}
-			try {
-				
-			} catch (Exception e) {
-				// TODO 自動生成された catch ブロック
-				e.printStackTrace();
-			}
-		}
-		return filePath;
-		
-		
-	}
-
-	
-	@SuppressWarnings("unused")
-	@RequestMapping(value = "/GetProcess", method = RequestMethod.GET)
-	public String getProcess(@RequestParam("jobId") String jobId, @RequestParam("step") String step,@RequestParam("name")String name) {
-		String status = null;
-		String filePath = Tools.getValue("stepFilePath");
-		filePath = filePath + jobId + "_step.xml";
-		// filePath = "C:\\temp\\ジョブID_accept.xml";
-		File file = new File(filePath);
-		if (file.exists()) {
-			HZZBatchStep hzzBatchStep = new HZZBatchStep();
-			hzzBatchStep.setStep(jobId, step, name);
-		}
-		if (status == "0") {
-			return "未実行";
-		} else if (status == "1") {
-			return "実行中";
-		} else if (status == "2") {
-			return "完了";
-		} else {
-			return "エラー";
-		}
-	}
-	
 	
 
 }
