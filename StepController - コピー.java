@@ -16,7 +16,7 @@ import hzzbatchcommon.utils.Tools;
 import hzzbatchcommon.step.HZZBatchStep;
 
 @RestController
-@RequestMapping(value = "/HZZBatchApi/Step")
+@RequestMapping(value = "/HZZBatc)
 public class StepController {
 	public static void main(String[] args) {
 		getEndTime("ジョブID");
