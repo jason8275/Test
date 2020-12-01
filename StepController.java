@@ -41,8 +41,7 @@ public class StepController {
 
 				try {
 					outputStream = new FileOutputStream(filePath);
-					// エンコード
-					// EUC-JPやUTF-8など
+					
 					outputStreamWriter = new OutputStreamWriter(outputStream, "SJIS");
 
 					outputStreamWriter.close();
