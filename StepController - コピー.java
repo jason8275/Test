@@ -17,10 +17,7 @@ import hzzbatchcommon.step.HZZBatchStep;
 
 @RestController
 
-public class StepController {
-	public static void main(String[] args) {
-		getEndTime("ジョブID");
-	}
+
 	@RequestMapping(value = "/GetEndTime", method = RequestMethod.GET)
 	public static String getEndTime(@RequestParam("jobId") String jobId) {
 		String result = null;
