@@ -1,6 +1,6 @@
 Learn java
 learn the springboot
-Learn SQL Server
+Learn SQL Server and learn the Oracle
 learn the language
 learn the Excel
 learn the gradle
