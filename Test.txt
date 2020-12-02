@@ -4,3 +4,7 @@ Learn Mysql
 learn the language
 learn the Excel
 
+
+
+learn the C
+
